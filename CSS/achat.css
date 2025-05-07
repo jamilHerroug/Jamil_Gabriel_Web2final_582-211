@@ -1,0 +1,114 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #fff;
+    margin: 0;
+    padding: 0;
+    border: 10px solid #74c174;
+    box-sizing: border-box;
+  }
+  
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  
+  .logo img {
+    height: 70px;
+    margin-right: 10px;
+  }
+  
+  .logo h1 {
+    font-size: 2rem;
+    font-family: 'Georgia', serif;
+    margin: 0;
+  }
+  
+  .festival {
+    writing-mode: vertical-rl;
+    font-size: 0.7rem;
+    color: #c33;
+    margin-right: 5px;
+  }
+  
+  .noel {
+    color: #4d994d;
+    font-weight: bold;
+  }
+  
+  .dansle {
+    color: #4d994d;
+  }
+  
+  .parc {
+    color: #c33;
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+  
+  nav {
+    margin-top: 1rem;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  nav button {
+    background-color: #2e5d2e;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
+  nav input {
+    padding: 10px;
+    font-size: 1rem;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background-color: #ccc;
+  }
+  
+  main {
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+  }
+  
+  .sapins {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+  
+  .item {
+    text-align: center;
+  }
+  
+  .item img {
+    border: 8px solid #4a1611;
+    border-radius: 8px;
+    width: 180px;
+    height: auto;
+  }
+  
+  .item button {
+    margin-top: 10px;
+    background-color: #2e5d2e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+  
