@@ -120,6 +120,11 @@ main {
   animation: scroll 20s linear infinite;
 }
 
+.Inscription {
+  background-color: #2e5d2e;
+  color: white;
+}
+
 @keyframes scroll {
   from { transform: translateX(100%); }
   to { transform: translateX(-100%); }
@@ -157,9 +162,28 @@ main {
     width: 90%;
     margin-top: 20px;
   }
-}
 
-.Inscription {
-  background-color: #2e5d2e;
-  color: white;
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px 0;
+  }
+
+  .search {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .search input {
+    width: 80%;
+    max-width: 300px;
+  }
+
 }
