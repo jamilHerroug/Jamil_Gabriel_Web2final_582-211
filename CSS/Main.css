@@ -309,3 +309,15 @@ footer {
 .submit-btn:hover {
   background-color: #3f7d3f;
 }
+.sponsor-logo {
+  height: 50px;           /* Hauteur uniforme */
+  width: auto;            /* Largeur proportionnelle */
+  margin: 0 20px;         /* Espacement horizontal */
+  vertical-align: middle; /* Alignement vertical */
+  object-fit: contain;    /* Ajuste l'image sans la déformer */
+}
+.sponsor-content {
+  display: inline-block;
+  animation: scroll 40s linear infinite; /* Avant : 20s */
+  white-space: nowrap;
+}
