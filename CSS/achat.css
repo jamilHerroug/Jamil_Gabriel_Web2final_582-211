@@ -1,114 +1,309 @@
+/* === STYLES DE BASE : Mobile First === */
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-color: #fff;
-    margin: 0;
-    padding: 0;
-    border: 10px solid #74c174;
-    box-sizing: border-box;
-  }
-  
+  margin: 0;
+  font-family: 'EB Garamond', serif;
+  background: #fff;
+  border: 10px solid #4caf50;
+  padding: 0;
+  text-align: center;
+  background-color: #e6f7ff; /* bleu très pâle */
+  overflow: hidden; /* empêche les flocons de sortir du cadre */
+  position: relative;
+}
+
+/* Flocons */
+body::before, body::after {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  height: 300%;
+  background-image: 
+    radial-gradient(white 2px, transparent 2px),
+    radial-gradient(white 1.5px, transparent 1.5px),
+    radial-gradient(white 1px, transparent 1px);
+  background-size: 50px 50px, 100px 100px, 150px 150px;
+  background-position: 0 0, 25px 25px, 75px 75px;
+  animation: snow 20s linear infinite, sway 4s ease-in-out infinite alternate;
+  z-index: -1;
+  pointer-events: none;
+  opacity: 0.6;
+}
+
+body::after {
+  animation-delay: 15s, 2s;
+  opacity: 0.4;
+}
+
+/* Animation de chute */
+@keyframes snow {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100%); }
+}
+
+/* Animation d'ondulation horizontale */
+@keyframes sway {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(20px); }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 20px;
+}
+
+.logo img {
+  height: auto;
+   max-width: 150px;  /* taille max sur mobile */
+   width: 100%;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  flex-wrap: wrap; /* permet aux boutons de passer à la ligne si trop larges */
+}
+
+.nav button {
+  background-color: #2e5d2e;
+  color: white;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.nav button:hover {
+  background-color: #3f7d3f;
+}
+.nav button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4caf50; /* ombre verte autour du bouton */
+}
+.search {
+  padding: 8px;
+  background: #ccc;
+  border: none;
+  border-radius: 6px;
+  width: 100%;
+  max-width: 300px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: bold;
+  line-height: 1.2;
+  text-align: center;
+}
+
+.billet-btn {
+  background-color: #2e5d2e;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+.billet-btn:hover {
+  background-color: #3f7d3f;
+}
+
+.billet-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4caf50; /* ombre verte autour du bouton */
+}
+
+.sponsor-banner {
+  background: white;
+  border: 2px solid black;
+  margin: 20px auto;
+  padding: 10px;
+  width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.sponsor-content {
+  display: inline-block;
+  animation: scroll 20s linear infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(100%); }
+  to { transform: translateX(-100%); }
+}
+
+.infolettre {
+  padding: 20px;
+  margin: 20px auto;
+  width: 90%;
+  max-width: 300px;
+  font-size: 16px;
+}
+
+.infolettre h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.infolettre input {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 2px solid black;
+  font-family: 'EB Garamond', serif;
+  font-size: 16px;
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4caf50; /* ombre verte autour du bouton */
+}
+
+footer {
+  font-size: 12px;
+  margin-top: 30px;
+  padding-bottom: 20px;
+}
+
+/* === STYLES POUR TABLETTES / DESKTOP (≥768px) === */
+
+@media (min-width: 768px) {
   header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
   }
-  
-  .logo {
-    display: flex;
-    align-items: center;
-  }
-  
+
   .logo img {
-    height: 70px;
-    margin-right: 10px;
+    max-width: 400px; /* plus grand sur desktop */
   }
-  
-  .logo h1 {
-    font-size: 2rem;
-    font-family: 'Georgia', serif;
-    margin: 0;
+
+  .nav {
+    flex-direction: row;
+     flex-wrap: nowrap;
   }
-  
-  .festival {
-    writing-mode: vertical-rl;
-    font-size: 0.7rem;
-    color: #c33;
-    margin-right: 5px;
-  }
-  
-  .noel {
-    color: #4d994d;
-    font-weight: bold;
-  }
-  
-  .dansle {
-    color: #4d994d;
-  }
-  
-  .parc {
-    color: #c33;
-    font-size: 2.2rem;
-    font-weight: bold;
-  }
-  
-  nav {
-    margin-top: 1rem;
-    display: flex;
-    gap: 10px;
-    align-items: center;
-  }
-  
-  nav button {
-    background-color: #2e5d2e;
-    color: white;
-    border: none;
-    padding: 10px 15px;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
-  }
-  
-  nav input {
-    padding: 10px;
-    font-size: 1rem;
-    border-radius: 5px;
-    border: 1px solid #444;
-    background-color: #ccc;
-  }
-  
+
+  .nav button {
+    font-size: 18px;        /* texte plus gros */
+    padding: 12px 10px;     /* plus de padding */
+    flex: 1;                /* chaque bouton prend une largeur égale */
+    min-width: 150px;       /* taille minimale pour éviter les boutons trop petits */
+    max-width: 2000px;       /* limite pour qu'ils ne s'étalent pas trop */
+}
+
   main {
-    display: flex;
+    flex-direction: row;
     justify-content: center;
-    padding: 2rem;
+    align-items: center;
+    gap: 40px;
+    padding: 40px 40px;
   }
-  
-  .sapins {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 2rem;
+
+  .title {
+    font-size: 50px;
+    text-align: left;
   }
-  
-  .item {
-    text-align: center;
+
+  .sponsor-banner {
+    width: 80%;
+    font-size: 18px;
   }
-  
-  .item img {
-    border: 8px solid #4a1611;
-    border-radius: 8px;
-    width: 180px;
-    height: auto;
+
+  .infolettre {
+    width: 300px;
   }
-  
-  .item button {
-    margin-top: 10px;
-    background-color: #2e5d2e;
-    color: white;
-    border: none;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 1rem;
-    cursor: pointer;
+  .submit-btn {
+  background-color: #2e5d2e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3f7d3f;
+}
+}
+/* HAMBURGER visible seulement sur mobile */
+.hamburger {
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  display: block;
+}
+
+/* NAV masqué par défaut sur mobile */
+.nav {
+  display: none;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+/* Quand le menu est actif */
+.nav.active {
+  display: flex;
+}
+
+/* Desktop : tout visible */
+@media (min-width: 768px) {
+  .hamburger {
+    display: none;
   }
-  
+
+  .nav {
+    display: flex !important;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 0;
+  }
+}
+@media (min-width: 768px) {
+  .submit-btn {
+    width: auto;
+    align-self: center;
+  }
+}
+.submit-btn {
+  background-color: #2e5d2e;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 10px 20px;
+  font-size: 16px;
+  margin-top: 10px;
+  cursor: pointer;
+  width: 100%;
+  transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+  background-color: #3f7d3f;
+}

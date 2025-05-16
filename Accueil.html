@@ -14,13 +14,22 @@
 
   <button class="hamburger" aria-label="Menu">☰</button>
 
-  <nav class="nav">
-    <button>Son sapin</button>
-    <button>Infos</button>
-    <button>Contacts</button>
-  </nav>
+ <div class="nav">
+        <a href="Achat.html">
+          <button type="button">Sapin</button>
+        </a>
+        <a href="Nouvelles_et_Infos.html">
+          <button type="button">Nouvelles et Infos</button>
+        </a>
+        <a href="Contact.html">
+          <button type="button" >Contacts</button>
+        </a>
+      </div>
 
   <input type="text" placeholder="Rechercher" class="search">
+  <form id="search-form" onsubmit="return false;">
+  <input type="text" id="search-input" class="search" placeholder="Rechercher un sapin...">
+</form>
 </header>
 
   <main>
@@ -49,6 +58,21 @@
 
   hamburger.addEventListener('click', () => {
     nav.classList.toggle('active');
+  });
+  const searchInput = document.getElementById('search-input');
+  const products = document.querySelectorAll('.product');
+
+  searchInput.addEventListener('input', function () {
+    const searchValue = searchInput.value.toLowerCase();
+
+    products.forEach(product => {
+      const productName = product.getAttribute('data-name').toLowerCase();
+      if (productName.includes(searchValue)) {
+        product.style.display = 'flex';
+      } else {
+        product.style.display = 'none';
+      }
+    });
   });
 </script>
 </body>
