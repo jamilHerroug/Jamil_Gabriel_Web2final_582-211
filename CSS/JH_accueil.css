@@ -4,7 +4,6 @@ body {
   margin: 0;
   font-family: 'EB Garamond', serif;
   background: #fff;
-  box-sizing: border-box;
   border: 10px solid #4caf50;
   padding: 0;
   text-align: center;
@@ -12,6 +11,7 @@ body {
   overflow: hidden; /* empêche les flocons de sortir du cadre */
   position: relative;
   overflow-y: auto;
+  box-sizing: border-box;
 }
 
 /* Flocons */
@@ -103,24 +103,30 @@ main {
   flex-direction: column;
   align-items: center;
   gap: 20px;
-  padding: 30px 20px;
+  padding: 20px;
 }
 
 .title {
   font-size: 36px;
   font-weight: bold;
-  line-height: 1.2;
+  font-family: 'EB Garamond', serif;
   text-align: center;
+   margin: 20px 0;
+}
+
+.renne {
+  max-width: 250px;
+  height: auto;
+  margin: 20px auto;
+  display: block;
 }
 
 .billet-btn {
   background-color: #2e5d2e;
   color: white;
-  padding: 10px 25px;
   border: none;
   border-radius: 8px;
   font-size: 16px;
-  margin-top: 10px;
   display: inline-block;
   text-decoration: none;
 }
@@ -308,4 +314,12 @@ footer {
 
 .submit-btn:hover {
   background-color: #3f7d3f;
+}
+footer {
+  position: relative; /* ✅ ou rien du tout */
+  font-size: 14px;
+  margin-top: 20px;
+  text-align: center;
+  padding: 10px;
+  font-family: 'EB Garamond', serif;
 }

@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>Noël dans le Parc</title>
-  <link href="/CSS/Accueil.css" rel="stylesheet">
+  <link href="/CSS/JH_accueil.css" rel="stylesheet">
   <link href="/CSS/Main.css" rel="stylesheet">
 </head>
 <body>
@@ -26,7 +26,6 @@
         </a>
       </div>
 
-  <input type="text" placeholder="Rechercher" class="search">
   <form id="search-form" onsubmit="return false;">
   <input type="text" id="search-input" class="search" placeholder="Rechercher un sapin...">
 </form>
@@ -34,7 +33,9 @@
 
   <main>
     <div>
-      <div class="title">Noël<br>dans le<br>parc</div>
+      <div class="title">
+        <h1>Noël<br>dans le<br>parc</h1>
+        </div>
       <a href="#" class="billet-btn">ACHETER DES BILLETS</a>
     </div>
     <img src="Assets/Images/renne.png" alt="Renne" class="mascotte">
@@ -52,6 +53,12 @@
       <input type="email" placeholder="E-Mail">
       <button type="submit" class="submit-btn">Soumettre</button>
     </div>
+    <footer>
+  <div class="footer-content">
+    <p>© 2023 Noël dans le Parc. Tous droits réservés.</p>
+    <p>Politique de confidentialité | Conditions d'utilisation</p>
+  </div>
+  </footer>
     <script>
   const hamburger = document.querySelector('.hamburger');
   const nav = document.querySelector('.nav');
