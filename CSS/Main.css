@@ -80,6 +80,13 @@ header {
   cursor: pointer;
 }
 
+.nav button:hover {
+  background-color: #3f7d3f;
+}
+.nav button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4caf50; /* ombre verte autour du bouton */
+}
 .search {
   padding: 8px;
   background: #ccc;
@@ -102,6 +109,26 @@ main {
   font-weight: bold;
   line-height: 1.2;
   text-align: center;
+}
+
+.billet-btn {
+  background-color: #2e5d2e;
+  color: white;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-top: 10px;
+  display: inline-block;
+  text-decoration: none;
+}
+.billet-btn:hover {
+  background-color: #3f7d3f;
+}
+
+.billet-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4caf50; /* ombre verte autour du bouton */
 }
 
 .sponsor-banner {
@@ -147,6 +174,11 @@ main {
   border: 2px solid black;
   font-family: 'EB Garamond', serif;
   font-size: 16px;
+}
+
+.submit-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px #4caf50; /* ombre verte autour du bouton */
 }
 
 footer {
