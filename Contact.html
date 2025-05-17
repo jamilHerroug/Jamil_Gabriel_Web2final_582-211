@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
@@ -9,23 +9,128 @@
     <link rel="stylesheet" href="./CSS/nouvelle_contact_GG.css">
 </head>
 <body>
+
+    <!-- En-tête du site avec logo, menu de navigation et champ de recherche -->
     <header>
+        <!-- Logo cliquable redirigeant vers la page d'accueil -->
         <a href="Accueil.html" class="logo">
-        <img src="Assets/Images/logo.png" alt="Logo">
+            <img src="Assets/Images/logo.png" alt="Logo">
         </a>
+
+        <!-- Menu hamburger pour version mobile -->
+        <button class="hamburger" aria-label="Menu">☰</button>
+
+        <!-- Navigation principale avec boutons vers les autres pages -->
         <div class="nav">
-          <a href="Achat.html">
-            <button type="button">Sapin</button>
-          </a>
-          <a href="Nouvelles_et_Infos.html">
-            <button type="button">Nouvelles et Infos</button>
-          </a>
-          <a href="Contact.html">
-            <button type="button" >Contacts</button>
-          </a>
+            <a href="Achat.html">
+                <button type="button">Sapin</button>
+            </a>
+            <a href="Nouvelles_et_Infos.html">
+                <button type="button">Nouvelles et Infos</button>
+            </a>
+            <a href="Contact.html">
+                <button type="button">Contacts</button>
+            </a>
         </div>
+
+        <!-- Barre de recherche -->
         <input type="text" placeholder="Rechercher" class="search">
-      </header>
-    
+    </header>
+
+    <main>
+        <!-- Section contenant les informations de contact -->
+        <section class="contact">
+            <h3>Contact:</h3>
+            <p><strong>ADMINISTRATION</strong><br>
+            <a href="mailto:info@festivalnoel.com">info@festivalnoel.com</a></p>
+
+            <p><strong>MÉDIAS</strong><br>
+            BEAUDOIN RELATIONS PUBLIQUES<br>
+            Steve Renaud<br>
+            <a href="tel:8198402829">819-840-2829</a> poste 302<br>
+            <a href="mailto:steve@beaudoinrp.com">steve@beaudoinrp.com</a></p>
+
+            <p><strong>BOOKING</strong><br>
+            <a href="mailto:programmation@festivalnoel.com">programmation@festivalnoel.com</a></p>
+        </section>
+
+        <!-- Section listant les lieux où se tient l'événement -->
+        <section class="adresses">
+            <h3>Adresses:</h3>
+            <p><strong>Parterre du Quartier des spectacles</strong><br>
+            1435 Rue St-Alexandre Suite 900, Montréal, QC H3A 2G4, Canada</p>
+
+            <p><strong>Parc des Compagnons-de-Saint-Laurent</strong><br>
+            4375 R. Cartier, Montréal, QC H2H 1W5, Canada</p>
+
+            <p><strong>Parc Lahaie</strong><br>
+            Montréal, QC H2T 1R7, Canada</p>
+        </section>
+
+        <!-- Formulaire d'inscription à l'infolettre -->
+        <section class="infolettre">
+            <h3>Inscription à l’infolettre</h3>
+            <form>
+                <input type="text" placeholder="Prénom">
+                <input type="text" placeholder="Nom">
+                <input type="email" placeholder="E-Mail">
+            </form>
+        </section>
+    </main>
+
+    <!-- Bannière de remerciements pour les partenaires -->
+    <div class="sponsor-banner">
+        <div class="sponsor-content">
+            🎁 Merci à nos partenaires :
+            <!-- Logos des sponsors -->
+            <img src="Assets/Images/canada-wordmark.jpg" alt="Canada" class="sponsor-logo">
+            <img src="Assets/Images/LM-AUTOCHTONE-gauche-1-scaled.jpg" alt="Autochtone" class="sponsor-logo">
+            <img src="Assets/Images/chassé_toyota.png" alt="Chassé Toyota" class="sponsor-logo">
+            <img src="Assets/Images/DieuDuCiel_logo_Brasserie.jpg" alt="Dieu du Ciel" class="sponsor-logo">
+            <img src="Assets/Images/images.jpeg" alt="Images" class="sponsor-logo">
+            <img src="Assets/Images/location turbo.png" alt="Location Turbo" class="sponsor-logo">
+            <img src="Assets/Images/Logo-MCV.webp" alt="MCV" class="sponsor-logo">
+            <img src="Assets/Images/Logo-mont-royal.png" alt="Mont Royal" class="sponsor-logo">
+            <img src="Assets/Images/logo-rouge-TM-eps-163595.webp" alt="Rouge" class="sponsor-logo">
+            <img src="Assets/Images/quebec6916.logowik.com.webp" alt="Rouge" class="sponsor-logo">
+            <img src="Assets/Images/rouge.png" alt="Rouge" class="sponsor-logo">
+        </div>
+
+        <!-- Pied de page avec mentions légales -->
+        <footer>
+            <div class="footer-content">
+                <p>© 2023 Noël dans le Parc. Tous droits réservés.</p>
+                <p>Politique de confidentialité | Conditions d'utilisation</p>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Script JavaScript pour gérer le menu mobile et la recherche -->
+    <script>
+        // Gestion du bouton hamburger pour afficher/masquer la navigation
+        const hamburger = document.querySelector('.hamburger');
+        const nav = document.querySelector('.nav');
+
+        hamburger.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+
+        // Gestion de la recherche dans les produits (nécessite des éléments .product avec data-name)
+        const searchInput = document.getElementById('search-input');
+        const products = document.querySelectorAll('.product');
+
+        searchInput.addEventListener('input', function () {
+            const searchValue = searchInput.value.toLowerCase();
+
+            products.forEach(product => {
+                const productName = product.getAttribute('data-name').toLowerCase();
+                if (productName.includes(searchValue)) {
+                    product.style.display = 'flex';
+                } else {
+                    product.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
 </html>
