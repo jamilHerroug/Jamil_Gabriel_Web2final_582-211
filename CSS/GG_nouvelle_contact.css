@@ -223,7 +223,7 @@ footer {
 }
 
   main {
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 40px;
@@ -239,26 +239,6 @@ footer {
     width: 80%;
     font-size: 18px;
   }
-
-  .infolettre {
-    width: 300px;
-  }
-  .submit-btn {
-  background-color: #2e5d2e;
-  color: white;
-  border: none;
-  border-radius: 6px;
-  padding: 10px 20px;
-  font-size: 16px;
-  margin-top: 10px;
-  cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
-}
-
-.submit-btn:hover {
-  background-color: #3f7d3f;
-}
 }
 /* HAMBURGER visible seulement sur mobile */
 .hamburger {
@@ -324,4 +304,22 @@ position: relative; /* ✅ ou rien du tout */
   text-align: center;
   padding: 10px;
   font-family: 'EB Garamond', serif;
+}
+
+
+h2, h3, h4 {
+    text-align: center;
+    margin-top: 20px;
+    color: darkgreen;
+}
+
+p {
+    margin: 10px 0;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.info-block {
+    border-top: 1px solid #ccc;
+    padding: 10px 0;
 }

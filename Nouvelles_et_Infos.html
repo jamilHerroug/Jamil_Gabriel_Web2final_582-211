@@ -5,14 +5,113 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Noel Dans Le Parc</title>
     <meta name="robots" content="noindex, nofollow">
-    <link rel="stylesheet" href="./CSS/nouvelle_et_info.css">
+    <link rel="stylesheet" href="./CSS/Main.css">
+    <link rel="stylesheet" href="./CSS/GG_nouvelle_contact.css">
 </head>
 <body>
     <header>
         <a href="Accueil.html" class="logo">
-        <img src="Assets/Images/logo.png" alt="Logo">
-  </a>
+            <img src="./Assets/Images/logo.png" alt="Logo">
+        </a>
+        <!-- Menu hamburger pour version mobile -->
+        <button class="hamburger" aria-label="Menu">☰</button>
+        <!-- Navigation principale avec boutons vers les autres pages -->
+        <div class="nav">
+            <a href="Achat.html">
+                <button type="button">Sapin</button>
+            </a>
+            <a href="Nouvelles_et_Infos.html">
+                <button type="button">Nouvelles et Infos</button>
+            </a>
+            <a href="Contact.html">
+                <button type="button">Contacts</button>
+            </a>
+        </div>
+        <!-- Barre de recherche -->
+        <input type="text" placeholder="Rechercher" class="search">
     </header>
-    
+
+    <main>
+        <section class="intro">
+            <h2>À VOIR ABSOLUMENT</h2>
+            <p>
+                La Grande Nuit de Noël arrive à grands pas et ne fait pas relâche! <br>
+                L'ensemble de nos spectacles extérieurs sont maintenus peu importe la météo.<br>
+                Le Glaçon son et lumière, notre installation immersive et sonore, est disponible tous les soirs jusqu’au 30 décembre, de 16 h à 22 h.<br>
+                Merci de respecter les consignes du personnel de sécurité. <br>
+                Merci d’arriver tôt afin de vous assurer une place dans les limites de la capacité maximale autorisée sur le site.<br>
+                Le port du masque est recommandé dans les zones achalandées. Un service de bar est offert sur place. Les paiements sans contact sont encouragés.
+            </p>
+        </section>
+
+        <section class="infos">
+            <h3>INFOS</h3>
+
+            <div class="info-block">
+                <h4>ACHAT DE SAPIN EN LIGNE</h4>
+                <p>Encouragez la culture, achetez un sapin cultivé!</p>
+                <button>Acheter</button>
+            </div>
+
+            <div class="info-block">
+                <h4>BEAU TEMPS - MAUVAIS TEMPS</h4>
+                <p>Tous les spectacles et activités sont maintenus.</p>
+            </div>
+
+            <div class="info-block">
+                <h4>SERVICE DE BAR</h4>
+                <p>Il est possible de se procurer des consommations alcoolisées ou non. Quoi de mieux qu’un bon chocolat chaud pour se réchauffer? En partenariat avec vous, sécuriser une petite gourmande sur le feu en passant!</p>
+            </div>
+
+            <div class="info-block">
+                <h4>MODES DE PAIEMENT ACCEPTÉS AU BAR</h4>
+                <p>Le mode de paiement électronique sans contact (Square) est disponible et nous acceptons l'argent comptant.</p>
+            </div>
+
+            <div class="info-block">
+                <h4>BOISSONS ALCOOLISÉES</h4>
+                <p>Dans les places, il est strictement interdit d’apporter de l’alcool provenant de l’extérieur.</p>
+            </div>
+
+            <div class="info-block">
+                <h4>BOUTEILLES EN VERRE INTERDITES</h4>
+                <p>Pour des raisons de sécurité, aucun contenant en verre ne sera admis sur le site.</p>
+            </div>
+
+            <div class="info-block">
+                <h4>ANIMAUX INTERDITS</h4>
+                <p>L’accès au site et spectacles est interdit aux animaux de compagnie.</p>
+            </div>
+        </section>
+
+        <section class="infolettre">
+            <h4>Inscription à l’infolettre</h4>
+            <form>
+                <input type="text" placeholder="Prénom" required>
+                <input type="text" placeholder="Nom" required>
+                <input type="email" placeholder="E-Mail" required>
+                <button type="submit">Envoyer</button>
+            </form>
+        </section>
+    </main>
+<div class="sponsor-banner">
+        <div class="sponsor-content">
+            🎁 Merci à nos partenaires :
+            <!-- Logos des sponsors -->
+            <img src="./Assets/Images/canada-wordmark.jpg" alt="Canada" class="sponsor-logo">
+            <img src="./Assets/Images/LM-AUTOCHTONE-gauche-1-scaled.jpg" alt="Autochtone" class="sponsor-logo">
+            <img src="./Assets/Images/chassé_toyota.png" alt="Chassé Toyota" class="sponsor-logo">
+            <img src="./Assets/Images/DieuDuCiel_logo_Brasserie.jpg" alt="Dieu du Ciel" class="sponsor-logo">
+            <img src="./Assets/Images/images.jpeg" alt="Images" class="sponsor-logo">
+            <img src="./Assets/Images/location turbo.png" alt="Location Turbo" class="sponsor-logo">
+            <img src="./Assets/Images/Logo-MCV.webp" alt="MCV" class="sponsor-logo">
+            <img src="./Assets/Images/Logo-mont-royal.png" alt="Mont Royal" class="sponsor-logo">
+            <img src="./Assets/Images/logo-rouge-TM-eps-163595.webp" alt="Rouge" class="sponsor-logo">
+            <img src="./Assets/Images/quebec6916.logowik.com.webp" alt="Rouge" class="sponsor-logo">
+            <img src="./Assets/Images/spectacle_de_montreal.png" alt="Rouge" class="sponsor-logo">
+        </div>
+    <footer>
+        <p>Noël dans le parc © 2023 - Tous droits réservés - Réseaux sociaux: inscription@festivalnoeldansleparc.com</p>
+    </footer>
 </body>
 </html>
