@@ -1,116 +1,117 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <title>Festival Noël dans le Parc</title>
-  <link rel="stylesheet" href="CSS/Main.css">
-  <link rel="stylesheet" href="CSS/JH_achat.css">
+<!DOCTYPE html> <!-- Déclaration du type de document HTML5 -->
+<html lang="fr"> <!-- Élément racine avec spécification de la langue française -->
+<head> <!-- En-tête du document contenant les métadonnées -->
+  <meta charset="UTF-8"> <!-- Définit l'encodage des caractères en UTF-8 -->
+  <title>Festival Noël dans le Parc</title> <!-- Titre de la page affiché dans l'onglet du navigateur -->
+  <link rel="stylesheet" href="CSS/Main.css"> <!-- Liaison vers la feuille de style principale -->
+  <link rel="stylesheet" href="CSS/JH_achat.css"> <!-- Liaison vers la feuille de style spécifique à la page d'achat -->
 </head>
-<body>
-  <header>
+<body> <!-- Corps du document contenant tout le contenu visible -->
+  <header> <!-- En-tête de la page -->
 
-     <a href="Accueil.html" class="logo">
-        <img src="./Assets/Images/logo.png" alt="Logo">
+     <a href="Accueil.html" class="logo"> <!-- Lien vers la page d'accueil avec classe logo -->
+        <img src="./Assets/Images/logo.png" alt="Logo"> <!-- Image du logo avec texte alternatif -->
   </a>
 
-   <button class="hamburger" aria-label="Menu">☰</button>
+   <button class="hamburger" aria-label="Menu">☰</button> <!-- Bouton de menu hamburger avec attribut d'accessibilité -->
 
-      <div class="nav">
-        <a href="Achat.html">
-          <button type="button">Sapin</button>
+      <div class="nav"> <!-- Conteneur pour la navigation (devrait idéalement être une balise <nav>) -->
+        <a href="Achat.html"> <!-- Lien vers la page d'achat -->
+          <button type="button">Sapin</button> <!-- Bouton dans un lien (pratique non recommandée) -->
         </a>
-        <a href="Nouvelles_et_Infos.html">
-          <button type="button">Nouvelles et Infos</button>
+        <a href="Nouvelles_et_Infos.html"> <!-- Lien vers la page des nouvelles -->
+          <button type="button">Nouvelles et Infos</button> <!-- Bouton dans un lien -->
         </a>
-        <a href="Contact.html">
-          <button type="button" >Contacts</button>
+        <a href="Contact.html"> <!-- Lien vers la page de contact -->
+          <button type="button" >Contacts</button> <!-- Bouton dans un lien -->
         </a>
       </div>
 
-      <form id="search-form" onsubmit="return false;">
-  <input type="text" id="search-input" class="search" placeholder="Rechercher">
+      <form id="search-form" onsubmit="return false;"> <!-- Formulaire de recherche qui ne s'envoie pas -->
+  <input type="text" id="search-input" class="search" placeholder="Rechercher"> <!-- Champ de recherche avec texte indicatif -->
 </form>
 
   </header>
 
-  <main>
-      <div class="product" data-name="Sapin">
-        <img src="./Assets/Images/grand-sapin-de-noel-artificiel-utah-pvc-premium-300-cm.jpg" alt="Sapin">
-        <div>
-      <button class="item">Sélectionner Sapin</button>
+  <main> <!-- Contenu principal de la page -->
+      <div class="product" data-name="Sapin"> <!-- Produit avec attribut data-name pour la recherche -->
+        <img src="./Assets/Images/grand-sapin-de-noel-artificiel-utah-pvc-premium-300-cm.jpg" alt="Sapin"> <!-- Image du produit -->
+        <div> <!-- Conteneur pour le bouton -->
+      <button class="item">Sélectionner Sapin</button> <!-- Bouton pour sélectionner le produit -->
     </div>
       </div>
-      <div class="product" data-name="Guirlande">
-        <img src="./Assets/Images/Guirlande.jpg" alt="Branche décorative">
-        <div>
-      <button class="item">Sélectionner Guirlande</button>
+      <div class="product" data-name="Guirlande"> <!-- Produit guirlande -->
+        <img src="./Assets/Images/Guirlande.jpg" alt="Branche décorative"> <!-- Image de la guirlande -->
+        <div> <!-- Conteneur pour le bouton -->
+      <button class="item">Sélectionner Guirlande</button> <!-- Bouton pour sélectionner la guirlande -->
     </div>
       </div>
-      <div class="product" data-name="Couronne">
-        <img src="./Assets/Images/Couronne de noel.jpg" alt="Couronne">
-        <div>
-      <button class="item">Sélectionner Couronne</button>
+      <div class="product" data-name="Couronne"> <!-- Produit couronne -->
+        <img src="./Assets/Images/Couronne de noel.jpg" alt="Couronne"> <!-- Image de la couronne -->
+        <div> <!-- Conteneur pour le bouton -->
+      <button class="item">Sélectionner Couronne</button> <!-- Bouton pour sélectionner la couronne -->
     </div>
       </div>
-      <div class="product" data-name="Pied de sapin">
-        <img src="./Assets/Images/pied de sapin.jpg" alt="Pied de sapin">
-        <div>
-      <button class="item">Sélectionner Pied de Sapin</button>
+      <div class="product" data-name="Pied de sapin"> <!-- Produit pied de sapin -->
+        <img src="./Assets/Images/pied de sapin.jpg" alt="Pied de sapin"> <!-- Image du pied de sapin -->
+        <div> <!-- Conteneur pour le bouton -->
+      <button class="item">Sélectionner Pied de Sapin</button> <!-- Bouton pour sélectionner le pied de sapin -->
     </div>
       </div>
   </main>
 
   
-      <div class="sponsor-banner">
-    <div class="sponsor-content">
-      🎁 Merci à nos partenaires : 
+      <div class="sponsor-banner"> <!-- Bannière des sponsors -->
+    <div class="sponsor-content"> <!-- Conteneur pour le contenu des sponsors -->
+      🎁 Merci à nos partenaires :  <!-- Texte avec emoji -->
       <!-- Logos des partenaires et commanditaires -->
-        <img src="./Assets/Images/canada-wordmark.jpg" alt="Canada" class="sponsor-logo">
-        <img src="./Assets/Images/LM-AUTOCHTONE-gauche-1-scaled.jpg" alt="Autochtone" class="sponsor-logo">
-        <img src="./Assets/Images/chassé_toyota.png" alt="Chassé Toyota" class="sponsor-logo">
-        <img src="./Assets/Images/DieuDuCiel_logo_Brasserie.jpg" alt="Dieu du Ciel" class="sponsor-logo">          <img src="./Assets/Images/images.jpeg" alt="Images" class="sponsor-logo">
-        <img src="./Assets/Images/location turbo.png" alt="Location Turbo" class="sponsor-logo">
-        <img src="./Assets/Images/Logo-MCV.webp" alt="MCV" class="sponsor-logo">
-        <img src="./Assets/Images/Logo-mont-royal.png" alt="Mont Royal" class="sponsor-logo">
-        <img src="./Assets/Images/logo-rouge-TM-eps-163595.webp" alt="Rouge" class="sponsor-logo">
-        <img src="./Assets/Images/quebec6916.logowik.com.webp" alt="Québec" class="sponsor-logo">
-        <img src="./Assets/Images/spectacle_de_montreal.png" alt="Spectacle Montréal" class="sponsor-logo">
+        <img src="./Assets/Images/canada-wordmark.jpg" alt="Canada" class="sponsor-logo"> <!-- Logo du Canada -->
+        <img src="./Assets/Images/LM-AUTOCHTONE-gauche-1-scaled.jpg" alt="Autochtone" class="sponsor-logo"> <!-- Logo Autochtone -->
+        <img src="./Assets/Images/chassé_toyota.png" alt="Chassé Toyota" class="sponsor-logo"> <!-- Logo Chassé Toyota -->
+        <img src="./Assets/Images/DieuDuCiel_logo_Brasserie.jpg" alt="Dieu du Ciel" class="sponsor-logo"> <!-- Logo Dieu du Ciel -->
+        <img src="./Assets/Images/images.jpeg" alt="Images" class="sponsor-logo"> <!-- Logo générique (nom à préciser) -->
+        <img src="./Assets/Images/location turbo.png" alt="Location Turbo" class="sponsor-logo"> <!-- Logo Location Turbo -->
+        <img src="./Assets/Images/Logo-MCV.webp" alt="MCV" class="sponsor-logo"> <!-- Logo MCV -->
+        <img src="./Assets/Images/Logo-mont-royal.png" alt="Mont Royal" class="sponsor-logo"> <!-- Logo Mont Royal -->
+        <img src="./Assets/Images/logo-rouge-TM-eps-163595.webp" alt="Rouge" class="sponsor-logo"> <!-- Logo Rouge -->
+        <img src="./Assets/Images/quebec6916.logowik.com.webp" alt="Québec" class="sponsor-logo"> <!-- Logo Québec -->
+        <img src="./Assets/Images/spectacle_de_montreal.png" alt="Spectacle Montréal" class="sponsor-logo"> <!-- Logo Spectacle Montréal -->
     </div>
   </div>
 
-    <section class="infolettre">
-      <h3>Inscription à l’infolettre</h3>
-      <form>
-        <input type="text" placeholder="Prénom" required>
-        <input type="text" placeholder="Nom" required>
-        <input type="email" placeholder="E-Mail" required>
-        <button type="submit" class="submit-btn">Soumettre</button>
+    <section class="infolettre"> <!-- Section d'inscription à l'infolettre -->
+      <h3>Inscription à l'infolettre</h3> <!-- Titre de la section -->
+      <form> <!-- Formulaire d'inscription -->
+        <input type="text" placeholder="Prénom" required> <!-- Champ prénom avec validation requise -->
+        <input type="text" placeholder="Nom" required> <!-- Champ nom avec validation requise -->
+        <input type="email" placeholder="E-Mail" required> <!-- Champ email avec validation requise -->
+        <button type="submit" class="submit-btn">Soumettre</button> <!-- Bouton de soumission du formulaire -->
       </form>
     </section>
-    <div class="footer-content">
-    <p>© 2023 Noël dans le Parc. Tous droits réservés.</p>
-    <p>Politique de confidentialité | Conditions d'utilisation</p>
+    <div class="footer-content"> <!-- Contenu du pied de page (note: balise <footer> manquante au début) -->
+    <p>© 2023 Noël dans le Parc. Tous droits réservés.</p> <!-- Mention de copyright -->
+    <p>Politique de confidentialité | Conditions d'utilisation</p> <!-- Mentions légales (devraient être des liens) -->
   </div>
-  </footer>
-  <script>
-  const hamburger = document.querySelector('.hamburger');
-  const nav = document.querySelector('.nav');
+  </footer> <!-- Fermeture de la balise footer (sans balise d'ouverture correspondante) -->
+  <script> <!-- Script JavaScript -->
+  const hamburger = document.querySelector('.hamburger'); // Sélectionne le bouton hamburger
+  const nav = document.querySelector('.nav'); // Sélectionne le menu de navigation
 
-  hamburger.addEventListener('click', () => {
-    nav.classList.toggle('active');
+  hamburger.addEventListener('click', () => { // Ajoute un écouteur d'événement au clic sur le hamburger
+    nav.classList.toggle('active'); // Ajoute ou supprime la classe 'active' pour afficher/masquer le menu
   });
-  const searchInput = document.getElementById('search-input');
-  const products = document.querySelectorAll('.product');
+  const searchInput = document.getElementById('search-input'); // Sélectionne le champ de recherche
+  const products = document.querySelectorAll('.product'); // Sélectionne tous les éléments avec la classe 'product'
 
-  searchInput.addEventListener('input', function () {
-    const searchValue = searchInput.value.toLowerCase();
+  searchInput.addEventListener('input', function () { // Ajoute un écouteur d'événement sur la saisie
+    const searchValue = searchInput.value.toLowerCase(); // Récupère la valeur saisie et la convertit en minuscules
 
-    products.forEach(product => {
-      const productName = product.getAttribute('data-name').toLowerCase();
-      if (productName.includes(searchValue)) {
-        product.style.display = 'flex';
+    products.forEach(product => { // Pour chaque produit
+      const productName = product.getAttribute('data-name').toLowerCase(); // Récupère l'attribut data-name
+      if (productName.includes(searchValue)) { // Vérifie si le nom du produit contient la valeur recherchée
+        product.style.display = 'flex'; // Affiche le produit
       } else {
-        product.style.display = 'none';
+        product.style.display = 'none'; // Masque le produit
       }
     });
   });
